@@ -1,0 +1,23 @@
+ID,First_Name,Last_Name,Qualification,Subject_Specialization,Years_Experience,Gender
+TCH001,Segun,Eze,SSCE Certificate,"Accounting, Bookkeeping",5,Male
+TCH002,Kelechi,Ibe,NCE Holder,"Mathematics, Further Mathematics",4,Male
+TCH003,Ifeanyi,Olatunji,B. Engr,"English Studies, Literature-in-English",4,Female
+TCH004,Ibrahim,Ogbonna,Bsc,Physics,15,Male
+TCH005,Ngozi,Yusuf,B. Engr,Chemistry,23,Female
+TCH006,Segun,Danjuma,B. Ed,French,1,Male
+TCH007,Chinedu,Adeyemi,SSCE Certificate,Mechanics,21,Female
+TCH008,Ngozi,Abubakar,Msc,Biology,15,Female
+TCH009,Ayoola,Mohammed,B. Engr,Government,26,Male
+TCH010,Femi,Alabi,B. Engr,CRS/IRS,5,Male
+TCH011,Emeka,Ayodele,SSCE Certificate,Data Processing,24,Male
+TCH012,Ayoola,Onwudiwe,B. Engr,Agricultural Science,19,Male
+TCH013,Adaobi,Yusuf,Msc,Marketing,2,Male
+TCH014,Sola,Ayodele,Bsc,Commerce,3,Female
+TCH015,Femi,Okafor,NCE Holder,Geography,18,Male
+TCH016,Chijioke,Ojo,NCE Holder,Economics,25,Female
+TCH017,Oluchi,Balogun,Bsc,Garment Making,4,Male
+TCH018,Musa,Adedoyin,Bsc,Food & Nutrition,17,Female
+TCH019,Musa,Okafor,B. Engr,Civic Education,12,Female
+TCH020,Emeka,Umeh,NCE Holder,Technical Drawing,22,Male
+TCH021,Ayoola,Yusuf,SSCE Certificate,Computer Science,3,Female
+TCH022,Uchenna,Alabi,Msc,History,12,Male

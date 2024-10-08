@@ -1,0 +1,161 @@
+ID,First_Name,Last_Name,Education_Level,Occupation,Socioeconomic_Status,Marriage_Status
+PR001,Nneka,Adebayo,MSc,Engineer,High,Single
+PR002,Halima,Abubakar,NCE,Farmer,Low,Divorced
+PR003,Musa,Ojo,BSc,Teacher,Middle,Single
+PR004,Oluchi,Ogundipe,PhD,Teacher,Middle,Married
+PR005,Bayo,Ogundipe,BSc,Farmer,Low,Divorced
+PR006,Musa,Adebayo,BSc,Civil Servant,Middle,Married
+PR007,Funke,Okafor,Secondary School,Civil Servant,Middle,Divorced
+PR008,Ayoola,Ibe,NCE,Civil Servant,Middle,Single
+PR009,Zainab,Nwachukwu,BSc,Teacher,Middle,Married
+PR010,Aishat,Ojo,BSc,Trader,Low,Divorced
+PR011,Ibrahim,Abubakar,NCE,Doctor,High,Married
+PR012,Segun,Adebayo,NCE,Farmer,Low,Married
+PR013,Ayoola,Obi,BSc,Civil Servant,Middle,Married
+PR014,Amina,Abubakar,NCE,Civil Servant,Middle,Married
+PR015,Chinedu,Okafor,PhD,Engineer,High,Divorced
+PR016,Uchenna,Okafor,Secondary School,Teacher,Middle,Single
+PR017,Ibrahim,Okafor,HND,Engineer,High,Single
+PR018,Tunde,Okafor,MSc,Teacher,Middle,Divorced
+PR019,Aishat,Danjuma,MSc,Civil Servant,Middle,Single
+PR020,Segun,Okafor,HND,Engineer,High,Married
+PR021,Aishat,Mohammed,HND,Trader,Low,Divorced
+PR022,Oluchi,Adeyemi,PhD,Doctor,High,Married
+PR023,Bayo,Ayodele,NCE,Doctor,High,Married
+PR024,Ayoola,Onwudiwe,Primary School,Civil Servant,Middle,Divorced
+PR025,Ayoola,Adeyemi,NCE,Doctor,High,Single
+PR026,Femi,Onwudiwe,NCE,Teacher,Middle,Single
+PR027,Amina,Onwudiwe,PhD,Farmer,Low,Divorced
+PR028,Nneka,Olatunji,HND,Doctor,High,Divorced
+PR029,Ifeanyi,Umeh,Secondary School,Engineer,High,Single
+PR030,Emeka,Adebayo,BSc,Trader,Low,Divorced
+PR031,Uchenna,Nwachukwu,BSc,Trader,Low,Single
+PR032,Oluchi,Adedoyin,MSc,Trader,Low,Single
+PR033,Kemi,Ojo,NCE,Doctor,High,Married
+PR034,Zainab,Danjuma,BSc,Trader,Low,Married
+PR035,Chinedu,Nwachukwu,Secondary School,Doctor,High,Married
+PR036,Uchenna,Adebayo,MSc,Civil Servant,Middle,Divorced
+PR037,Segun,Adebayo,Secondary School,Engineer,High,Divorced
+PR038,Kemi,Danjuma,Secondary School,Doctor,High,Married
+PR039,Bayo,Onwudiwe,BSc,Engineer,High,Divorced
+PR040,Ifeanyi,Okonkwo,Primary School,Farmer,Low,Married
+PR041,Bayo,Umeh,Primary School,Trader,Low,Divorced
+PR042,Ngozi,Okeke,NCE,Trader,Low,Divorced
+PR043,Aishat,Ibe,Secondary School,Engineer,High,Divorced
+PR044,Ifeanyi,Okonkwo,NCE,Doctor,High,Single
+PR045,Aishat,Adeyemi,PhD,Trader,Low,Single
+PR046,Ifeanyi,Umeh,MSc,Trader,Low,Single
+PR047,Kemi,Danjuma,BSc,Farmer,Low,Single
+PR048,Kemi,Ibrahim,BSc,Trader,Low,Married
+PR049,Chijioke,Ibe,Secondary School,Trader,Low,Divorced
+PR050,Halima,Umeh,MSc,Teacher,Middle,Married
+PR051,Chinedu,Alabi,Secondary School,Farmer,Low,Married
+PR052,Bayo,Olatunji,HND,Doctor,High,Divorced
+PR053,Kemi,Okafor,PhD,Teacher,Middle,Single
+PR054,Chijioke,Okeke,NCE,Doctor,High,Married
+PR055,Oluchi,Onwudiwe,Primary School,Teacher,Middle,Divorced
+PR056,Zainab,Onwudiwe,NCE,Doctor,High,Single
+PR057,Emeka,Obi,HND,Engineer,High,Divorced
+PR058,Segun,Umeh,MSc,Trader,Low,Divorced
+PR059,Ibrahim,Ibrahim,NCE,Doctor,High,Divorced
+PR060,Kemi,Umeh,NCE,Farmer,Low,Single
+PR061,Tunde,Umeh,BSc,Civil Servant,Middle,Divorced
+PR062,Ibrahim,Onwudiwe,NCE,Civil Servant,Middle,Married
+PR063,Adaobi,Umeh,HND,Teacher,Middle,Married
+PR064,Oluchi,Ayodele,MSc,Trader,Low,Married
+PR065,Bayo,Nwachukwu,Secondary School,Teacher,Middle,Single
+PR066,Emeka,Danjuma,NCE,Farmer,Low,Divorced
+PR067,Funke,Eze,Primary School,Teacher,Middle,Single
+PR068,Tunde,Mohammed,Primary School,Engineer,High,Divorced
+PR069,Chinedu,Nwachukwu,Secondary School,Teacher,Middle,Divorced
+PR070,Aishat,Ibe,NCE,Doctor,High,Single
+PR071,Adaobi,Ibe,PhD,Engineer,High,Single
+PR072,Oluchi,Abubakar,Primary School,Trader,Low,Married
+PR073,Funke,Onwudiwe,MSc,Teacher,Middle,Married
+PR074,Ayoola,Nwachukwu,Primary School,Civil Servant,Middle,Married
+PR075,Emeka,Ogbonna,MSc,Trader,Low,Divorced
+PR076,Ngozi,Okeke,MSc,Doctor,High,Single
+PR077,Amina,Umeh,Secondary School,Teacher,Middle,Single
+PR078,Ibrahim,Onwudiwe,PhD,Teacher,Middle,Married
+PR079,Adaobi,Alabi,Primary School,Teacher,Middle,Divorced
+PR080,Chinedu,Okafor,Secondary School,Teacher,Middle,Single
+PR081,Ayoola,Eze,Primary School,Trader,Low,Divorced
+PR082,Chijioke,Okonkwo,Primary School,Teacher,Middle,Single
+PR083,Aishat,Ogundipe,NCE,Farmer,Low,Single
+PR084,Ijeoma,Abubakar,NCE,Civil Servant,Middle,Single
+PR085,Halima,Eze,HND,Trader,Low,Married
+PR086,Amina,Umeh,Secondary School,Civil Servant,Middle,Divorced
+PR087,Chinedu,Okafor,MSc,Engineer,High,Married
+PR088,Ijeoma,Umeh,PhD,Farmer,Low,Divorced
+PR089,Chinedu,Okafor,HND,Teacher,Middle,Divorced
+PR090,Amina,Alabi,MSc,Doctor,High,Married
+PR091,Ngozi,Adebayo,PhD,Teacher,Middle,Divorced
+PR092,Oluchi,Onwudiwe,BSc,Trader,Low,Single
+PR093,Oluchi,Onwudiwe,PhD,Engineer,High,Divorced
+PR094,Femi,Adeyemi,NCE,Doctor,High,Single
+PR095,Ijeoma,Nwosu,NCE,Civil Servant,Middle,Single
+PR096,Ngozi,Eze,MSc,Civil Servant,Middle,Single
+PR097,Ijeoma,Abubakar,PhD,Farmer,Low,Divorced
+PR098,Oluchi,Nwachukwu,BSc,Engineer,High,Divorced
+PR099,Femi,Adebayo,NCE,Teacher,Middle,Single
+PR100,Kemi,Okafor,PhD,Civil Servant,Middle,Divorced
+PR101,Zainab,Ogundipe,HND,Engineer,High,Married
+PR102,Femi,Danjuma,BSc,Trader,Low,Married
+PR103,Nneka,Ayodele,PhD,Doctor,High,Divorced
+PR104,Chijioke,Mohammed,BSc,Civil Servant,Middle,Divorced
+PR105,Ibrahim,Adeyemi,PhD,Trader,Low,Single
+PR106,Ayoola,Adeyemi,Primary School,Doctor,High,Divorced
+PR107,Zainab,Eze,NCE,Doctor,High,Married
+PR108,Sola,Yusuf,NCE,Farmer,Low,Divorced
+PR109,Ifeanyi,Olatunji,NCE,Trader,Low,Married
+PR110,Ijeoma,Umeh,PhD,Trader,Low,Single
+PR111,Ayoola,Adebayo,BSc,Trader,Low,Married
+PR112,Funke,Olatunji,Secondary School,Civil Servant,Middle,Divorced
+PR113,Femi,Obi,MSc,Engineer,High,Married
+PR114,Ifeanyi,Balogun,BSc,Farmer,Low,Single
+PR115,Sola,Ogbonna,MSc,Civil Servant,Middle,Single
+PR116,Ibrahim,Danjuma,MSc,Engineer,High,Divorced
+PR117,Oluchi,Abubakar,MSc,Civil Servant,Middle,Divorced
+PR118,Ibrahim,Ayodele,BSc,Civil Servant,Middle,Divorced
+PR119,Bayo,Ayodele,MSc,Teacher,Middle,Single
+PR120,Funke,Yusuf,PhD,Teacher,Middle,Divorced
+PR121,Ifeanyi,Nwachukwu,MSc,Doctor,High,Married
+PR122,Chijioke,Nwachukwu,MSc,Farmer,Low,Married
+PR123,Chijioke,Adeyemi,BSc,Trader,Low,Divorced
+PR124,Ifeanyi,Okonkwo,MSc,Civil Servant,Middle,Married
+PR125,Tunde,Obi,Primary School,Doctor,High,Married
+PR126,Kelechi,Okafor,BSc,Trader,Low,Married
+PR127,Funke,Eze,Primary School,Civil Servant,Middle,Single
+PR128,Musa,Alabi,MSc,Doctor,High,Single
+PR129,Adaobi,Ogundipe,MSc,Trader,Low,Divorced
+PR130,Tunde,Okafor,Secondary School,Civil Servant,Middle,Divorced
+PR131,Femi,Nwachukwu,Primary School,Engineer,High,Single
+PR132,Ibrahim,Onwudiwe,PhD,Trader,Low,Married
+PR133,Segun,Ogbonna,PhD,Civil Servant,Middle,Single
+PR134,Chijioke,Mohammed,MSc,Farmer,Low,Single
+PR135,Amina,Abubakar,BSc,Farmer,Low,Married
+PR136,Kelechi,Ayodele,HND,Trader,Low,Divorced
+PR137,Kelechi,Okonkwo,MSc,Farmer,Low,Single
+PR138,Emeka,Ogbonna,BSc,Teacher,Middle,Married
+PR139,Funke,Ibe,PhD,Trader,Low,Divorced
+PR140,Kelechi,Balogun,NCE,Doctor,High,Married
+PR141,Amina,Nwachukwu,BSc,Engineer,High,Divorced
+PR142,Aishat,Nwosu,MSc,Engineer,High,Married
+PR143,Ibrahim,Olatunji,Secondary School,Farmer,Low,Married
+PR144,Bayo,Umeh,Primary School,Civil Servant,Middle,Single
+PR145,Halima,Olatunji,HND,Trader,Low,Divorced
+PR146,Oluchi,Nwosu,MSc,Farmer,Low,Single
+PR147,Amina,Adedoyin,BSc,Engineer,High,Divorced
+PR148,Ijeoma,Adebayo,NCE,Farmer,Low,Married
+PR149,Halima,Nwosu,NCE,Trader,Low,Married
+PR150,Ifeanyi,Ogundipe,NCE,Trader,Low,Married
+PR151,Zainab,Okafor,NCE,Teacher,Middle,Married
+PR152,Aishat,Ogundipe,Primary School,Doctor,High,Single
+PR153,Musa,Adebayo,Secondary School,Trader,Low,Divorced
+PR154,Ifeanyi,Ibe,HND,Farmer,Low,Divorced
+PR155,Ngozi,Alabi,HND,Trader,Low,Married
+PR156,Chijioke,Eze,Primary School,Farmer,Low,Married
+PR157,Ijeoma,Ojo,Primary School,Teacher,Middle,Married
+PR158,Ayoola,Adeyemi,HND,Doctor,High,Divorced
+PR159,Ijeoma,Ogbonna,NCE,Trader,Low,Single
+PR160,Chijioke,Ojo,HND,Teacher,Middle,Married
