@@ -25,6 +25,44 @@ def predict_performance(features):
 # Streamlit interface for Prediction
 st.title('Student Performance Grade Prediction')
 
+# Education level mapping
+education_mapping = {
+    'Primary School': 0,
+    'Secondary School': 1,
+    'NCE': 2,
+    'HND': 3,
+    'BSc': 4,
+    'MSc': 5,
+    'PhD': 6
+}
+
+# Marriage Status Mapping
+marriage_mapping = {
+    'Married': 1,
+    'Single': 2,
+    'Divorced': 0,
+    'Separated': 3
+}
+
+# Private Home Tutor Mapping
+private_tutor_mapping = {
+    'Yes': 1,
+    'No': 0
+}
+
+# Socioeconomic Status Mapping
+socioeconomic_mapping = {
+    'High': 2,
+    'Medium': 1,
+    'Low': 0
+}
+
+# Access to Technology Mapping
+access_technology_mapping = {
+    'Yes': 1,
+    'No': 0
+}
+
 # Collecting user input features for prediction
 SS3_avg_attendance = st.number_input('SS3 Average Attendance', min_value=0.0, max_value=100.0, step=0.1)
 SS2_avg_attendance = st.number_input('SS2 Average Attendance', min_value=0.0, max_value=100.0, step=0.1)
@@ -37,11 +75,17 @@ SS2_Second_Term = st.number_input('SS2 Second Term Score', min_value=0.0, max_va
 SS2_Third_Term = st.number_input('SS2 Third Term Score', min_value=0.0, max_value=100.0, step=0.1)
 SS3_First_Term = st.number_input('SS3 First Term Score', min_value=0.0, max_value=100.0, step=0.1)
 Avg_Daily_Study_Hours = st.number_input('Average Daily Study Hours', min_value=0.0, max_value=24.0, step=0.1)
-Education_Level = st.selectbox('Education Level', [1, 2, 3])  # 1 = Primary, 2 = Secondary, 3 = Tertiary
-Marriage_Status = st.selectbox('Marriage Status', [0, 1])  # 0 = Single, 1 = Married
-Socioeconomic_Status = st.selectbox('Socioeconomic Status', [1, 2, 3])  # 1 = Low, 2 = Middle, 3 = High
-Private_Home_Tutor = st.selectbox('Private Home Tutor', [0, 1])  # 0 = No, 1 = Yes
-Access_to_Technology = st.selectbox('Access to Technology', [0, 1])  # 0 = No, 1 = Yes
+selected_education = st.selectbox('Parental Education Level', list(education_mapping.keys()))
+selected_marriage_status = st.selectbox('Marriage Status', list(marriage_mapping.keys()))
+selected_socioeconomic_status = st.selectbox('Socioeconomic Status', list(socioeconomic_mapping.keys()))
+selected_private_tutor = st.selectbox('Private Home Tutor', list(private_tutor_mapping.keys()))
+selected_access_to_technology = st.selectbox('Access to Technology', list(access_technology_mapping.keys()))
+
+Education_Level = education_mapping[selected_education]
+Marriage_Status = marriage_mapping[selected_marriage_status]
+Private_Home_Tutor = private_tutor_mapping[selected_private_tutor]
+Socioeconomic_Status = socioeconomic_mapping[selected_socioeconomic_status]
+Access_to_Technology = access_technology_mapping[selected_access_to_technology]
 
 # Grade mapping
 grade_mapping = {
