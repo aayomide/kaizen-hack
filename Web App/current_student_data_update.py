@@ -1,54 +1,71 @@
 import streamlit as st
-import pandas as pd
-from datetime import datetime
+from google.cloud import bigquery
+from google.api_core.exceptions import GoogleAPIError
+import os
+from dotenv import load_dotenv
 
-# Data collection interface
-st.title('Data Update')
+# Load environment variables from .env file
+load_dotenv()
 
-# Collect basic student data
-student_name = st.text_input("Student Name (Surname first)")
-attendance = st.number_input("Average Attendance (in percentage)", min_value=0, max_value=100, step=1)
-extracurricular = st.text_input("Extracurricular Activities")
-term = st.selectbox("Term", ["First", "Second", "Third"])
-current_class = st.selectbox("Current Class", ["SS1", "SS2", "SS3"])
+# Get BigQuery project and table IDs from environment variables
+project_id = os.getenv("BIGQUERY_PROJECT_ID")
+exam_scores_table_id = os.getenv("BQ_PERFORMANCE_TABLE_ID")
 
-# List of subjects
-subjects = [
-    "English Studies", "Mathematics", "Civic Education", "Data Processing", 
-    "Garment Making", "Mechanics", "Bookkeeping", "Marketing", "Computer Science", 
-    "Literature-in-English", "Physics", "Chemistry", "Food & Nutrition", 
-    "Economics", "Technical Drawing", "Further Mathematics", "Government", 
-    "Commerce", "Biology", "Accounting", "Geography", "French", "History", 
-    "Agricultural Science", "CRS/IRS", "None"
-]
+# Error handling for environment variables
+if not project_id or not exam_scores_table_id:
+    st.error("BigQuery environment variables (BIGQUERY_PROJECT_ID or BIGQUERY_EXAM_SCORES_TABLE_ID) are not set. Please check your environment setup.")
+else:
+    try:
+        # Initialize BigQuery client
+        client = bigquery.Client(project=project_id)
+    except Exception as e:
+        st.error(f"Failed to initialize BigQuery client: {str(e)}")
 
-# Collect scores for 8 subjects
-subject_scores = {}
-st.header("Enter Scores for 9 Subjects")
+    # Streamlit form: Data collection interface for Student Exam Scores
+    st.title("Student Exam Scores Form")
 
-for i in range(1, 10):
-    subject = st.selectbox(f"Subject {i}", subjects, key=f"subject_{i}")
-    score = st.number_input(f"Score for {subject}", min_value=0, max_value=100, step=1, key=f"score_{i}")
-    subject_scores[subject] = score
+    with st.form("exam_scores_form"):
+        student_id = st.text_input("Student ID", placeholder="e.g., STD001")
+        subject_name = st.selectbox("Subject Name", [
+            'English Studies', 'Mathematics', 'Civic Education', 'Data Processing', 'Garment Making', 
+            'Mechanics', 'Bookkeeping', 'Marketing', 'Biology', 'Chemistry', 'Physics', 
+            'Further Mathematics', 'Agricultural Science', 'Computer Science', 'Economics',
+            'CRS/IRS', 'History', 'Geography', 'Government', 'Literature-in-English', 'French',
+            'Technical Drawing', 'Food & Nutrition', 'Accounting', 'Commerce'
+        ])
+        year = st.selectbox("Year", ['SS1', 'SS2', 'SS3'])
+        term = st.selectbox("Term", ['First Term', 'Second Term', 'Third Term'])
+        score = st.number_input("Score", min_value=0, max_value=100, step=1)
+        grade = st.selectbox("Grade", ['A1', 'B2', 'B3', 'C4', 'C5', 'C6', 'D7', 'E8', 'F9'])
 
-# When the user clicks the "Save Data" button
-if st.button("Save Data"):
-    curr_student_data = {
-        "Name": student_name,
-        "Attendance": attendance,
-        "Extracurricular": extracurricular,
-        "Term": term,
-        "Current_Class": current_class
-    }
-    
-    # Add subjects and scores to student data
-    for subject, score in subject_scores.items():
-        curr_student_data[subject] = score
-    
-    # Convert to DataFrame
-    df = pd.DataFrame([curr_student_data])
-    
-    # Save to CSV (append mode, no header)
-    df.to_csv("data/curr_student_data.csv", mode='a', header=False, index=False)
-    
-    st.success(f"Data for {student_name} has been saved.")
+        submitted = st.form_submit_button("Submit")
+
+        # Error handling for missing fields
+        if submitted:
+            if not student_id:
+                st.error("Please make sure Student ID is filled out.")
+            else:
+                # Prepare data for BigQuery
+                rows_to_insert = [{
+                    "Student_ID": student_id,
+                    "Subject_Name": subject_name,
+                    "Year": year,
+                    "Term": term,
+                    "Score": score,
+                    "Grade": grade
+                }]
+
+                try:
+                    # Insert data into BigQuery
+                    errors = client.insert_rows_json(exam_scores_table_id, rows_to_insert)  # Returns errors list
+
+                    if not errors:
+                        st.success(f"Exam scores successfully uploaded.")
+                    else:
+                        st.error(f"Failed to insert data: {errors}")
+
+                except GoogleAPIError as e:
+                    st.error(f"An error occurred while communicating with BigQuery: {e.message}")
+                
+                except Exception as e:
+                    st.error(f"An unexpected error occurred: {str(e)}")
