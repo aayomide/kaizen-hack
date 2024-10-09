@@ -5,13 +5,25 @@ import os
 from dotenv import load_dotenv
 
 # Load environment variables from .env file
-load_dotenv()
+# load_dotenv()
 
 # Get BigQuery project and table IDs from environment variables
 # project_id = os.getenv("BIGQUERY_PROJECT_ID")
 # exam_scores_table_id = os.getenv("BQ_PERFORMANCE_TABLE_ID")
-project_id = 'datafest-kaizen-437821'
-exam_scores_table_id = 'datafest-kaizen-437821.kaizen_school_dataset.fact_student_performance_raw'
+
+
+# Load Google Cloud credentials from Streamlit secrets
+credentials = st.secrets["GOOGLE_APPLICATION_CREDENTIALS"]
+
+# Write credentials to a temporary file
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/tmp/gcp_credentials.json"
+with open(os.environ["GOOGLE_APPLICATION_CREDENTIALS"], "w") as f:
+    f.write(credentials)
+
+# Get BigQuery project and table IDs from Streamlit secrets
+project_id = st.secrets["BIGQUERY_PROJECT_ID"]
+exam_scores_table_id = st.secrets["BQ_STUDENTS_TABLE_ID"]
+
 
 # Error handling for environment variables
 if not project_id or not exam_scores_table_id:
