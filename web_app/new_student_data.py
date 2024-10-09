@@ -10,11 +10,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Get BigQuery project and table IDs from environment variables
-# project_id = os.getenv("BIGQUERY_PROJECT_ID")
-# table_id = os.getenv("BQ_STUDENTS_TABLE_ID")
-
-project_id = 'datafest-kaizen-437821'
-table_id = 'datafest-kaizen-437821.kaizen_school_dataset.dim_students_raw'
+project_id = os.getenv("BIGQUERY_PROJECT_ID")
+table_id = os.getenv("BQ_STUDENTS_TABLE_ID")
 
 # Initialize BigQuery client
 client = bigquery.Client(project=project_id)
