@@ -8,8 +8,10 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Get BigQuery project and table IDs from environment variables
-project_id = os.getenv("BIGQUERY_PROJECT_ID")
-exam_scores_table_id = os.getenv("BQ_PERFORMANCE_TABLE_ID")
+# project_id = os.getenv("BIGQUERY_PROJECT_ID")
+# exam_scores_table_id = os.getenv("BQ_PERFORMANCE_TABLE_ID")
+project_id = 'datafest-kaizen-437821'
+exam_scores_table_id = 'datafest-kaizen-437821.kaizen_school_dataset.fact_student_performance_raw'
 
 # Error handling for environment variables
 if not project_id or not exam_scores_table_id:
