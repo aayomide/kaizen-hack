@@ -22,7 +22,7 @@ with open(os.environ["GOOGLE_APPLICATION_CREDENTIALS"], "w") as f:
 
 # Get BigQuery project and table IDs from Streamlit secrets
 project_id = st.secrets["BIGQUERY_PROJECT_ID"]
-exam_scores_table_id = st.secrets["BQ_STUDENTS_TABLE_ID"]
+exam_scores_table_id = st.secrets["BQ_PERFORMANCE_TABLE_ID"]
 
 
 # Error handling for environment variables
