@@ -4,7 +4,7 @@ import pandas as pd
 import joblib
 
 # Load the pre-trained model
-model = joblib.load('web_app/prediction_model.pkl')
+model = joblib.load('https://github.com/aayomide/kaizen-hack/blob/main/web_app/prediction_model.pkl')
 
 # Define the function for prediction
 def predict_performance(features):
