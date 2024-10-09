@@ -64,6 +64,11 @@ Based on the analysis, we provided recommendations to the school's stakeholders 
 - Early intervention for struggling students
 
 ---
+## App Demo
+
+![Project Demo](kaizen_demo.gif)
+
+---
 
 ## 💻 How to Run the Project
 ### Install Dependencies: Run the following command to install the necessary packages:
