@@ -14,7 +14,7 @@ load_dotenv()
 # table_id = os.getenv("BQ_STUDENTS_TABLE_ID")
 
 project_id = 'datafest-kaizen-437821'
-exam_scores_table_id = 'datafest-kaizen-437821.kaizen_school_dataset.dim_students_raw'
+table_id = 'datafest-kaizen-437821.kaizen_school_dataset.dim_students_raw'
 
 # Initialize BigQuery client
 client = bigquery.Client(project=project_id)
