@@ -5,7 +5,7 @@
 ### 🛠️ Project Background
 We were contracted as consultants by a school in Lagos Nigeria to build a data-driven solution that can proactively enhance student performance in upcoming exams. Our project provides an end-to-end data solution, from data collection to model development, aimed at helping students score above average in their final exams.
 
-# <a href="https://kaizen-school-app.streamlit.app/" style="color: red;" target="_blank>LIVE PROJECT</a> 
+# <a href="https://kaizen-school-app.streamlit.app/" style="color: red;" target="_blank">LIVE PROJECT</a> 
 
 ## 📊 Key Components
 
