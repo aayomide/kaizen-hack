@@ -36,6 +36,16 @@ pg = st.navigation(
     }
 )
 
+# Add button with a link to Power BI
+st.sidebar.markdown("""
+    <div style="margin-bottom: 20px;">
+        <a href="https://app.powerbi.com/view?r=eyJrIjoiMTU0ZGMxOGEtMTViOC00OTE0LTg5NjEtNDU5YzAwOTllYzQ5IiwidCI6IjI1Y2UwMjYxLWJiZDYtNDljZC1hMWUyLTU0MjYwODg2ZDE1OSJ9" target="_blank">
+            <button style="padding: 10px 20px; background-color: #083c5d; color: white; border: none; border-radius: 5px; width: 100%;">
+                Analytics
+            </button>
+        </a>
+    </div>
+    """, unsafe_allow_html=True)
 
 # --- SHARED ON ALL PAGES ---
 st.sidebar.markdown("Made by TEAM KAIZEN")
