@@ -63,24 +63,45 @@ access_technology_mapping = {
     'No': 0
 }
 
-# Collecting user input features for prediction
-SS3_avg_attendance = st.number_input('SS3 Average Attendance', min_value=0.0, max_value=100.0, step=0.1)
-SS2_avg_attendance = st.number_input('SS2 Average Attendance', min_value=0.0, max_value=100.0, step=0.1)
-SS1_avg_attendance = st.number_input('SS1 Average Attendance', min_value=0.0, max_value=100.0, step=0.1)
-SS1_First_Term = st.number_input('SS1 First Term Score', min_value=0.0, max_value=100.0, step=0.1)
-SS1_Second_Term = st.number_input('SS1 Second Term Score', min_value=0.0, max_value=100.0, step=0.1)
-SS1_Third_Term = st.number_input('SS1 Third Term Score', min_value=0.0, max_value=100.0, step=0.1)
-SS2_First_Term = st.number_input('SS2 First Term Score', min_value=0.0, max_value=100.0, step=0.1)
-SS2_Second_Term = st.number_input('SS2 Second Term Score', min_value=0.0, max_value=100.0, step=0.1)
-SS2_Third_Term = st.number_input('SS2 Third Term Score', min_value=0.0, max_value=100.0, step=0.1)
-SS3_First_Term = st.number_input('SS3 First Term Score', min_value=0.0, max_value=100.0, step=0.1)
-Avg_Daily_Study_Hours = st.number_input('Average Daily Study Hours', min_value=0.0, max_value=24.0, step=0.1)
-selected_education = st.selectbox('Parental Education Level', list(education_mapping.keys()))
-selected_marriage_status = st.selectbox('Marriage Status', list(marriage_mapping.keys()))
-selected_socioeconomic_status = st.selectbox('Socioeconomic Status', list(socioeconomic_mapping.keys()))
-selected_private_tutor = st.selectbox('Private Home Tutor', list(private_tutor_mapping.keys()))
-selected_access_to_technology = st.selectbox('Access to Technology', list(access_technology_mapping.keys()))
+# Layout using columns
+st.header("Attendance Scores")
+col1, col2 = st.columns(2)
 
+with col1:
+    SS1_avg_attendance = st.number_input('SS1 Average Attendance', min_value=0.0, max_value=100.0, step=0.1)
+    SS2_avg_attendance = st.number_input('SS2 Average Attendance', min_value=0.0, max_value=100.0, step=0.1)
+    
+with col2:
+    SS3_avg_attendance = st.number_input('SS3 Average Attendance', min_value=0.0, max_value=100.0, step=0.1)
+
+st.header("Past Performance")
+col3, col4 = st.columns(2)
+
+with col3:
+    SS1_First_Term = st.number_input('SS1 First Term Score', min_value=0.0, max_value=100.0, step=0.1)
+    SS1_Second_Term = st.number_input('SS1 Second Term Score', min_value=0.0, max_value=100.0, step=0.1)
+    SS1_Third_Term = st.number_input('SS1 Third Term Score', min_value=0.0, max_value=100.0, step=0.1)
+    SS3_First_Term = st.number_input('SS3 First Term Score', min_value=0.0, max_value=100.0, step=0.1)
+
+with col4:
+    SS2_First_Term = st.number_input('SS2 First Term Score', min_value=0.0, max_value=100.0, step=0.1)
+    SS2_Second_Term = st.number_input('SS2 Second Term Score', min_value=0.0, max_value=100.0, step=0.1)
+    SS2_Third_Term = st.number_input('SS2 Third Term Score', min_value=0.0, max_value=100.0, step=0.1)
+
+st.header("Other Factors")
+col5, col6 = st.columns(2)
+
+with col5:
+    Avg_Daily_Study_Hours = st.number_input('Average Daily Study Hours', min_value=0.0, max_value=24.0, step=0.1)
+    selected_education = st.selectbox('Parental Education Level', list(education_mapping.keys()))
+    selected_marriage_status = st.selectbox('Parental Marriage Status', list(marriage_mapping.keys()))
+
+with col6:
+    selected_socioeconomic_status = st.selectbox('Socioeconomic Status', list(socioeconomic_mapping.keys()))
+    selected_private_tutor = st.selectbox('Private Home Tutor', list(private_tutor_mapping.keys()))
+    selected_access_to_technology = st.selectbox('Access to Technology', list(access_technology_mapping.keys()))
+
+# Mapping selected options to numerical values
 Education_Level = education_mapping[selected_education]
 Marriage_Status = marriage_mapping[selected_marriage_status]
 Private_Home_Tutor = private_tutor_mapping[selected_private_tutor]
