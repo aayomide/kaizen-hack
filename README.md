@@ -41,6 +41,8 @@ We were contracted as consultants by a school in Lagos Nigeria to build a data-d
 
 ## 👣 Process
 
+![Architectural view of solution](Architectural_view_of_solution.jpg)
+
 ### 1. Data Collection
 We collected and simulated various data points including:
 - Student academic history (grades, attendance, exam scores)
